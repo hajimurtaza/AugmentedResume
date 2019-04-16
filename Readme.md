@@ -1,5 +1,4 @@
 # Augmented Resume
-> Short blurb about what your product does.
 
 A different kind of AR.
 
