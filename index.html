@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ARJS</title>
+</head>
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs="debugUIEnabled: false" >
+      
+      <a-marker preset='hiro'>
+
+      <!-- EXPERIENCE -->
+      <a-box position='0.35 0 -0.60' depth=0.2 width=0.2 height=0.001 src='img/react.png'></a-box>
+      <a-box position='0.10 0 -0.60' depth=0.2 width=0.2 height=0.001 src='img/angular.png'></a-box>
+      <a-box position='-0.10 0 -0.60' depth=0.2 width=0.2 height=0.001 material='opacity:1' src='img/nodejs.png'></a-box>
+      <a-box position='-0.3 0 -0.60' depth=0.2 width=0.2 height=0.001 src='img/sass.png'></a-box>
+      <a-box position='-0.1 0 -0.40' depth=0.2 width=0.2 height=0.001 src='img/circle-logo-badge-black.png'></a-box>
+      <a-box position='0.2 0 -0.40' depth=0.18 width=0.2 height=0.001 src='img/240px-Python-logo-notext.svg.png'></a-box>
+
+      <!-- SKILLS -->
+      <a-plane position='0.05 0 -0.15' rotation='-90 0 0' width=0.34 height=0.1 material="opacity:0.8;">
+        <a-text value="SKILLS" width=1 height=1 color='blue' position='-0.1 0 0.05'></a-text>
+      </a-plane>
+
+      <!-- PERSONAL INFO -->
+      <a-plane rotation="-90 0 0" position='0 0 0.3' width=1.1 height=0.7 material="opacity:0;color:black;">
+        <a-circle radius='0.25' position='-0.25 0.05 0' src='img/profilepic.png'></a-circle>
+        <a-plane position='0.275 0.05 0.2' width=0.5 height=0.5 material="opacity:0.8;color:black;">
+          <a-text value="John Doe \n Graduate Student \n \n Lorem ipsum dolor \n sit amet, consectetur \nadipiscing elit,\n sed do eiusmod \ntempor incididunt ut\n labore."
+            width=1 height=1.5 wrapCount='5' position='-0.25 0 0.2' material='font-weight:bold'></a-text>
+        </a-plane>
+      </a-plane>
+      
+      <!-- CONTACT INFO -->
+      <a-circle rotation="-90 0 0" position='0.8 0 -0.25' radius='0.1' src='img/GitHub.png' open-github></a-circle>
+      <a-circle rotation="-90 0 0" position='0.8 0 0' radius='0.1' src='img/linkedin.png'></a-circle>
+      <a-circle rotation="-90 0 0" position='0.8 0 0.25' radius='0.1' src='img/so-icon.png'></a-circle>
+      <a-circle rotation="-90 0 0" position='0.8 0 0.50' radius='0.1' src='img/medium.png'></a-circle>
+      
+      <!-- PROJECTS  -->
+      <a-plane position='-0.2 0.1 0.62' rotation='-90 0 0' width=0.28 height=0.1>
+        <a-text value="PROJECTS" width=1 height=1 color='blue' position='-0.12 0 0.1'></a-text>
+      </a-plane>  
+      <a-video src='img/vid.mp4' rotation='-90 0 0' width=1.3 depth=0.5 position='0 0 1.2' loop=true></a-video>
+      
+      <!-- RESUME -->
+      <a-plane src='img/resume.jpg' position='-1.8 0 0.5' height=2.4 width=2 rotation='-90 0 0'></a-plane>
+    
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
